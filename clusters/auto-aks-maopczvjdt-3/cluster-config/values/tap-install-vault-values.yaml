@@ -1,0 +1,15 @@
+---
+tap_install:
+  secrets:
+    eso:
+      vault:
+        server: http://34.212.24.3:8200
+        namespace: ""
+        auth:
+          kubernetes:
+            mountPath: auto-aks-maopczvjdt-3
+            role: auto-aks-maopczvjdt-3--tap-install-secrets
+      remote_refs:
+        tap_sensitive_values:
+          sensitive_tap_values_yaml:
+            key: secret/dev/auto-aks-maopczvjdt-3/tap/sensitive-values.yaml
